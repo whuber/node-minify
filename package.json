@@ -39,7 +39,8 @@
     "eslint": "eslint lib test || true",
     "pretest": "npm run eslint",
     "test-cov": "npm run pretest && jest --coverage",
-    "test": "jest",
+    "test-cli": "node bin/cli.js --compressor babili --input 'examples/public/js/sample.js' --output 'examples/public/js-dist/babili-es6.js'",
+    "test": "npm run test-cli && jest",
     "posttest": "npm run clean",
     "clean": "rm -f ./examples/public/dist/*",
     "clean-cov": "npm run clean && rm -Rf ./coverage",
@@ -69,6 +70,7 @@
     "ora": "0.3.0",
     "pretty-bytes": "4.0.2",
     "sqwish": "0.2.2",
+    "text-table": "0.2.0",
     "uglify-js": "3.0.10",
     "xtend": "4.0.1"
   },
