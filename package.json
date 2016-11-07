@@ -39,7 +39,7 @@
     "eslint": "eslint lib test || true",
     "pretest": "npm run eslint",
     "test-cov": "npm run pretest && jest --coverage",
-    "test-cli": "node bin/cli.js --compressor babili --input './examples/public/js/sample.js' --output './examples/public/js-dist/babili-es6.js'",
+    "test-cli": "node bin/cli.js --compressor babili --input examples/public/js/sample.js --output examples/public/js-dist/babili-es6.js",
     "test": "npm run test-cli && jest",
     "posttest": "npm run clean",
     "clean": "rm -f ./examples/public/dist/* ./examples/public/js-dist/*",
