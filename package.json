@@ -42,7 +42,7 @@
     "test-cli": "node bin/cli.js --compressor babili --input './examples/public/js/sample.js' --output './examples/public/js-dist/babili-es6.js'",
     "test": "npm run test-cli && jest",
     "posttest": "npm run clean",
-    "clean": "rm -f ./examples/public/dist/*",
+    "clean": "rm -f ./examples/public/dist/* ./examples/public/js-dist/*",
     "clean-cov": "npm run clean && rm -Rf ./coverage",
     "release-patch": "npm version patch -m 'Bump %s' && git push --tags origin HEAD:master",
     "release-minor": "npm version minor -m 'Bump %s' && git push --tags origin HEAD:master",
