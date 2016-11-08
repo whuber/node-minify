@@ -15,12 +15,14 @@ program
 
 //console.log(program);
 
+var options = program.opts();
+
 /**
  * Show meow help if missing mandatory.
  */
 
-if (!program.compressor || !program.input || !program.output) {
+if (!options.compressor || !options.input || !options.output) {
   program.help();
 }
 
-cli(program);
+cli(options);
