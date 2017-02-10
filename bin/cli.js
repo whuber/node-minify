@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// /Users/rodolphe/.nvm/versions/node/v6.9.1/bin/node-minify -c all -i lol.js -o lolo.js
+// /Users/rodolphe/.nvm/versions/node/v7.2.0/bin/node-minify -c all -i lol.js -o lolo.js
 
 var program = require('commander');
 var cli = require('../lib/cli');
@@ -18,7 +18,7 @@ program
 var options = program.opts();
 
 /**
- * Show meow help if missing mandatory.
+ * Show help if missing mandatory.
  */
 
 if (!options.compressor || !options.input || !options.output) {
