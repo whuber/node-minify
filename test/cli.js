@@ -10,15 +10,25 @@ describe('cli', function() {
   beforeEach(function() {
     this.spy2 = sinon.spy(nodeMinify, 'minify');
   });
+  afterEach(function() {
+    nodeMinify.minify.restore();
+  });
 
-  it('should minify to have been called', function(done) {
+  it('should minify to have been called', function() {
     cli({
       compressor: 'gcc',
       input: 'examples/public/js/sample.js',
       output: 'examples/public/js-dist/babili-es6.js'
     });
     expect(this.spy2.calledOnce);
-    done();
+  });
+  it('should minify to have been called with all compressors', function() {
+    cli({
+      compressor: 'all',
+      input: 'examples/public/js/sample.js',
+      output: 'examples/public/js-dist/babili-es6.js'
+    });
+    expect(this.spy2.calledOnce);
   });
 });
 
