@@ -42,4 +42,8 @@ describe('pretty bytes', function() {
   it('should return a negative number', function() {
     expect(utils.prettyBytes(-1)).to.equal('-1 B');
   });
+
+  it('should return 0', function() {
+    expect(utils.prettyBytes(0)).to.equal('0 B');
+  });
 });
