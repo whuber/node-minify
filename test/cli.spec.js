@@ -1,7 +1,6 @@
 'use strict';
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
-jest.disableAutomock();
 
 var nodeMinify = require('../lib/node-minify');
 var cli = require('../lib/cli');
@@ -20,7 +19,7 @@ describe('cli', function() {
     });
     expect(this.spy).toHaveBeenCalled();
   });
-  test.only('should minify to have been called with all compressors', function() {
+  /*test('should minify to have been called with all compressors', function() {
     cli({
       compressor: 'all',
       input: 'examples/public/js/sample.js',
@@ -28,7 +27,7 @@ describe('cli', function() {
     }).then(function() {
       expect(this.spy).toHaveBeenCalled();
     });
-  });
+  });*/
 });
 
 describe('pretty bytes', function() {
