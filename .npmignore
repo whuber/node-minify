@@ -10,5 +10,5 @@ __tests__
 .travis.yml
 appveyor.yml
 yarn.lock
-lib
+src
 .babelrc
